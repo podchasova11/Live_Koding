@@ -94,7 +94,7 @@ else:
 LENGTH = 7
 
 
-def create_fib_sequence(length = LENGTH):
+def create_fib_sequence(length=LENGTH):
     lst = [0, 1]
     for i in range(1, length-1):
         lst.append(lst[i-1] + lst[i])
@@ -103,3 +103,50 @@ def create_fib_sequence(length = LENGTH):
 
 res = create_fib_sequence()
 print(res)
+
+# 2. Определить, является ли строка палиндромом.
+# Python. Palindrome function.
+
+phrase = input("Enter string: ").lower().strip().replace(" ", "")
+
+if phrase[::-1] == phrase:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+
+# Сортировка. Пузырьком. Проходимся по элементам массива и
+# попарно сравниваем. Если левый больше правого - меняем местами.
+
+# Задача на сортировку пузырьком (Bubble Sort):
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        # Проходим по массиву и сравниваем каждую пару соседних элементов
+        for j in range(0, n-i-1):
+            # Если элементы расположены в неправильном порядке, меняем их местами
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+
+# Пример использования:
+arr = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(arr)
+print("Отсортированный массив:")
+for i in range(len(arr)):
+    print("%d" % arr[i])
+
+# В общем случае, кортеж (tuple) весит меньше, чем список (list). Причина в том, что
+# кортежи в Python являются неизменяемыми, то есть их элементы не могут быть
+# изменены после создания кортежа. В результате,
+# кортежи могут быть более компактными в памяти,
+# чем списки, потому что они не требуют дополнительной
+# памяти для хранения информации о возможности изменения элементов.
+import sys
+
+my_list = [1, 2, 3, 4, 5]
+my_tuple = (1, 2, 3, 4, 5)
+
+print("Размер списка:", sys.getsizeof(my_list), "байт")
+print("Размер кортежа:", sys.getsizeof(my_tuple), "байт")
+
