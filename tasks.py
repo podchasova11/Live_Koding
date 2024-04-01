@@ -84,23 +84,19 @@ if phrase[::-1] == phrase:
 else:
     print("Not a palindrome")
 
+######################################################
+
+#  Сформируйте последовательность Фибоначчи.
+# Python. Fibonacci sequence.
+LENGTH = 7
 
 
-word = 'AVIA'
-dict_1 = {
-    "AEIOULNSTR": 1,
-    "DGV": 2,
-    "DCMP": 3,
-    "АВЕИНОРСТ": 1,
-    "ДКЛМПУ": 2,
-    "БГЁЬЯ": 3
-}
-score = 0
+def create_fib_sequence(length = LENGTH):
+    lst = [0, 1]
+    for i in range(1, length-1):
+        lst.append(lst[i-1] + lst[i])
+    return lst
 
-for letter in word:
-    for key in dict_1:
-        if letter.upper() in key:
-            score += dict_1[key]
-            break
 
-print("The Scrabble score of the word '{}' according to the standard Scrabble rules: {}".format(word, score))
+res = create_fib_sequence()
+print(res)
