@@ -151,4 +151,20 @@ my_tuple = (1, 2, 3, 4, 5)
 
 print("Размер списка:", sys.getsizeof(my_list), "байт")
 print("Размер кортежа:", sys.getsizeof(my_tuple), "байт")
+#################################################
 
+
+
+import sqlite3
+import pytest
+
+
+def connect_database():
+
+    # Установка соединения с базой данных
+    connection = sqlite3.connect('test.db')
+
+    print("Соединение с БД установлено")
+
+    # Возвращение соединения с БД
+    return connection
