@@ -154,7 +154,7 @@ print("Размер кортежа:", sys.getsizeof(my_tuple), "байт")
 #################################################
 
 
-
+import MySQLdb
 import sqlite3
 import pytest
 
@@ -168,3 +168,7 @@ def connect_database():
 
     # Возвращение соединения с БД
     return connection
+
+
+a = (3,)
+print((a))
