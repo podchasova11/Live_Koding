@@ -104,16 +104,6 @@ def create_fib_sequence(length=LENGTH):
 res = create_fib_sequence()
 print(res)
 
-# 2. Определить, является ли строка палиндромом.
-# Python. Palindrome function.
-
-phrase = input("Enter string: ").lower().strip().replace(" ", "")
-
-if phrase[::-1] == phrase:
-    print("Palindrome")
-else:
-    print("Not a palindrome")
-
 
 # Сортировка. Пузырьком. Проходимся по элементам массива и
 # попарно сравниваем. Если левый больше правого - меняем местами.
