@@ -1,4 +1,5 @@
 
+
 """
 Пройти по списку и :
 вывести в консоли full name (firstName + lastName)
