@@ -1,3 +1,4 @@
+
 Задача (Проверить список на числа):
 - https://rutube.ru/shorts/4f7cee56f1cd700877a1ecb17a200ae0/
 - https://rutube.ru/channel/57100353/
