@@ -48,3 +48,19 @@ for name in roses:
 
 unique_last_names = {user['lastName'] for user in users}
 print("\nКоличество уникальных фамилий:", len(unique_last_names))
+#################
+print("Полные имена:")
+for user in users:
+    full_name = f"{user['firstName']} {user['lastName']}"
+    print(full_name)
+
+total_salary = sum(user['salary'] for user in users)
+print("\nИтоговая зарплата:", total_salary)
+
+print("\nИмена с фамилией 'Rose':")
+roses = [user['firstName'] for user in users if user['lastName'] == 'Rose']
+for name in roses:
+    print(name)
+
+unique_last_names = {user['lastName'] for user in users}
+print("\nКоличество уникальных фамилий:", len(unique_last_names))
